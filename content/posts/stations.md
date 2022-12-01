@@ -3,7 +3,7 @@ title: "Stations"
 date: 2022-11-20T09:03:20-08:00
 draft: false
 ---
-{{<table “table table-striped table-bordered">}}
+{{<table "table table-striped table-bordered">}}
 | station     |   play_count |
 |:------------|-------------:|
 | kool108     |         1926 |
