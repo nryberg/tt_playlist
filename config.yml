@@ -30,6 +30,8 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  assets: 
+      favicon: "img/favicon.ico"
 
 homeInfoParams:
     Title: "Hi there \U0001F44B"

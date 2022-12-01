@@ -6,4 +6,4 @@ draft: false
 
 My First Post
 
-![swag](/xmas_swag.png)
+![swag](/images/xmas_swag.jpg)
