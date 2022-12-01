@@ -39,6 +39,10 @@ homeInfoParams:
 
 menu:
   main:
+    - identifier: code
+      name: code
+      url: /code/
+      weight: 5
     - identifier: categories
       name: categories
       url: /categories/
