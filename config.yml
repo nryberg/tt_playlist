@@ -42,18 +42,18 @@ menu:
     - identifier: code
       name: code
       url: /code/
-      weight: 5
-    - identifier: categories
-      name: categories
-      url: /categories/
+      weight: 40
+    - identifier: songs
+      name: songs
+      url: /songs/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: stations
+      name: stations
+      url: /stations/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: artists
+      name: artists
+      url: /artists/
       weight: 30
 
 profileMode:

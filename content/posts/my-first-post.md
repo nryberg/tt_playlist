@@ -7,3 +7,10 @@ draft: false
 My First Post
 
 ![swag](/images/xmas_swag.jpg)
+
+
+{{<table "table table-striped table-bordered">}}
+A | B | C
+-- | -- | --
+1 | 2 | 3
+{{</table>}}
