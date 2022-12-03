@@ -5,22 +5,12 @@ draft: false
 description: "Count the total number of plays by station and hour"
 ---
 
-```sql
-with raw as (select 
-station , 
-substring(p.play_ts, 1, 13) as hourly,
-play_ts
-from public.plays p 
-where p.play_ts  like '2022%'
---and station = 'kool108'
+An extremely long list per hour and station breaking out the content. 
 
-order by p.play_ts 
-)
-select station, hourly, count(distinct(play_ts)) as play_count
-from raw 
-group by station , hourly
-order by station, hourly
-```
+<!--more-->
+
+{{< gist nryberg 6cfa313a2625fa3f0ea17029780ac65d >}}
+
 
 |station|hourly|play_count|
 |-------|------|----------|

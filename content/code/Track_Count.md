@@ -5,37 +5,19 @@ draft: false
 description: "Plays by Track"
 ---
 
-```sql
-WITH titles
-AS (
-    select 
-	t.track_name, 
-	play_ts 
-	FROM PUBLIC.plays p
-	JOIN PUBLIC.track t ON p.track_id = t.track_id
-	
-	)
-	,tots
-AS (
-	SELECT count(DISTINCT (play_ts)) AS count_plays
-		,max(play_ts) AS last_play
-		,track_name
-	FROM titles
-	GROUP BY track_name
-	ORDER BY count_plays DESC
-	)
-SELECT *
-FROM tots
-WHERE count_plays > 1
-ORDER BY count_plays desc 
-```
+The master list of plays by track, sorted in descending order
 
-|count_plays|last_play|track_name|
-|-----------|---------|----------|
-|154|2022-12-01T20:02:11|Run Run Rudolph|
-|2|2022-11-26T13:36:09|Run To You|
-|16|2022-12-01T02:57:10|Santa Baby|
-|14|2022-11-30T01:56:18|Santa, Can’t You Hear Me|
-|160|2022-12-01T13:45:19|Santa Claus Is Coming to Town|
-|24|2022-11-30T14:54:18|Santa Claus Is Coming To Town|
-|59|2022-12-01T07:21:19|Santa Claus Is Comin' to Town|
+<!--more-->
+
+{{< gist nryberg 37362e6e4f51f5d10f4b6cafcede6b55 >}}
+
+
+|count_plays|track_name|artist_count|last_play|
+|-----------:|----------|------------:|---------|
+|1022|Sleigh Ride|8|2022-12-02|
+|877|Winter Wonderland|9|2022-12-02|
+|654|Carol of the Bells|2|2022-12-02|
+|654|Jingle Bells|4|2022-12-02|
+|531|Rudolph The Red-Nosed Reindeer|2|2022-12-02|
+|487|Frosty the Snowman|4|2022-12-02|
+|461|It's The Most Wonderful Time Of The Year|2|2022-12-02|

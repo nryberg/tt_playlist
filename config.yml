@@ -55,6 +55,10 @@ menu:
       name: artists
       url: /artists/
       weight: 30
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 50
 
 profileMode:
     enabled: false # needs to be explicitly set

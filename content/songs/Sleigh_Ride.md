@@ -15,20 +15,7 @@ Johnny Mathis clips along at a slightly faster pace, and really hits those giddy
 
 {{< youtube 6b9BKK27HuQ>}}
 
-## Code
-
-```sql
-SELECT a.artist_name
-	,a2.album_name
-	,count(DISTINCT (p.play_ts)) AS play_count
-FROM plays p
-JOIN track t ON p.track_id = t.track_id
-JOIN artist a ON p.artist_id = a.artist_id
-JOIN album a2 ON p.album_id = a2.album_id
-WHERE t.track_name = 'Sleigh Ride'
-GROUP BY a.artist_name
-	,a2.album_name
-```
+## Artists
 
 |artist_name|album_name|play_count|
 |-----------|----------|----------:|

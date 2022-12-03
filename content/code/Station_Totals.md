@@ -5,14 +5,12 @@ draft: false
 description: "Count the total number of plays overall"
 ---
 
-```sql
-SELECT 
-station,
-COUNT(DISTINCT(play_ts)) as play_count
-FROM public.plays
-GROUP BY station
-ORDER BY COUNT(DISTINCT(play_ts)) DESC
-```
+Total plays by Station
+
+<!--more-->
+
+{{< gist nryberg 7a650aef3825ddc9fae84fba76b0c397 >}}
+
 
 |station    |play_count|
 |-----------|----------:|
