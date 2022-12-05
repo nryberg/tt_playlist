@@ -15,6 +15,10 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
+  # Only render the posts in the homepage
+  
+  mainSections: posts
+
   ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
