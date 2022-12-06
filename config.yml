@@ -19,6 +19,8 @@ params:
   
   mainSections: posts
 
+  googleMapsAPIKey: "AIzaSyDjI4A1dNaM1naTe2iu6q1_4X_L9PGIeUo"
+
   ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
