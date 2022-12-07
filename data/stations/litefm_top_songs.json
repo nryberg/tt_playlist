@@ -1,0 +1,54 @@
+{
+    "WITH plays\r\nAS (\r\n\tSELECT station\r\n\t\t,play_ts\r\n\t\t,play_ts_zone\r\n\t\t,a.artist_name\r\n\t\t,album_id\r\n\t\t,pl.track_id\r\n\t\t,capture_ts\r\n\t\t,t.track_name\r\n\tFROM PUBLIC.plays AS pl\r\n\tJOIN PUBLIC.track t ON pl.track_id = t.track_id\r\n\tJOIN PUBLIC.artist a ON pl.artist_id = a.artist_id\r\n\tWHERE station = 'litefm'\r\n\t)\r\n\t,counter\r\nAS (\r\n\tSELECT track_id\r\n\t\t,track_name\r\n\t\t,artist_name\r\n\t\t,count(DISTINCT (play_ts)) AS count_plays\r\n\tFROM plays\r\n\tGROUP BY track_id\r\n\t\t,track_name\r\n\t\t,artist_name\r\n\t)\r\nSELECT track_name\r\n\t,artist_name\r\n\t,count_plays\r\nFROM counter\r\nORDER BY count_plays DESC limit 10": [
+        {
+            "track_name" : "All I Want for Christmas Is You",
+            "artist_name" : "Mariah Carey",
+            "count_plays" : 83
+        },
+        {
+            "track_name" : "Feliz Navidad",
+            "artist_name" : "José Feliciano",
+            "count_plays" : 77
+        },
+        {
+            "track_name" : "Rudolph The Red-Nosed Reindeer",
+            "artist_name" : "Burl Ives & Videocraft Chorus",
+            "count_plays" : 73
+        },
+        {
+            "track_name" : "Jingle Bell Rock",
+            "artist_name" : "Brenda Lee",
+            "count_plays" : 66
+        },
+        {
+            "track_name" : "Sleigh Ride",
+            "artist_name" : "The Ronettes",
+            "count_plays" : 64
+        },
+        {
+            "track_name" : "Let It Snow! Let It Snow! Let It Snow!",
+            "artist_name" : "Dean Martin",
+            "count_plays" : 58
+        },
+        {
+            "track_name" : "Christmas (Baby Please Come Home)",
+            "artist_name" : "Darlene Love",
+            "count_plays" : 57
+        },
+        {
+            "track_name" : "It's The Most Wonderful Time Of The Year",
+            "artist_name" : "Andy Williams",
+            "count_plays" : 57
+        },
+        {
+            "track_name" : "You're A Mean One, Mr. Grinch",
+            "artist_name" : "THURL RAVENSCROFT",
+            "count_plays" : 51
+        },
+        {
+            "track_name" : "It's Beginning To Look A Lot Like Christmas",
+            "artist_name" : "Bing Crosby",
+            "count_plays" : 51
+        }
+    ]}
+    
